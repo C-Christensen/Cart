@@ -13,6 +13,12 @@ class App extends React.Component<{}, {}> {
           <h1>Shopping List</h1>
        </header>
        <p className="Intro">Life is much better when you have an online order on the way!</p>
+
+       <ol>
+         <li>Tea</li>
+         <li>Latte</li>
+         <li>Mocha</li>
+         </ol>
      </div>
     );
   }
