@@ -19,7 +19,12 @@ class ShoppingItem{
 class App extends React.Component<{}, AppState> {
 
   constructor(props: any, state: any){
-  super(props, state);}
+  super(props, state);
+  // state object of the constructor
+  this.state = {
+    items: []
+   };
+  }
 
     public render(){ 
     return (
