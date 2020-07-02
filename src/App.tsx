@@ -3,9 +3,20 @@ import './App.css';
 import { render } from '@testing-library/react';
 
 
+// interface that contain an Array of type ShoppingItem
+interface AppState{
+  items: Array<ShoppingItem>; 
 
+}
 
-class App extends React.Component<{}, {}> {
+// keep track of name and price of the shopping items
+class ShoppingItem{
+  public name = "";
+  public price = 0.0;
+}
+
+// no props
+class App extends React.Component<{}, AppState> {
     public render(){ 
     return (
       <div className="App">
