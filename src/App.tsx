@@ -17,6 +17,10 @@ class ShoppingItem{
 
 // no props
 class App extends React.Component<{}, AppState> {
+
+  constructor(props: any, state: any){
+  super(props, state);}
+
     public render(){ 
     return (
       <div className="App">
