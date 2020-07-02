@@ -52,18 +52,53 @@ class App extends React.Component<{}, AppState> {
       <div className="App">
         <header className="App-header">
           <h1>Shopping List</h1>
-       </header>
-       <p className="Intro">Life is much better when you have an online order on the way!</p>
+        </header>
+        <p className="Intro">Life is much better when you have an online order on the way!</p>
 
       {/* state object's list using map*/}
-       <ul>
+        <ul>
          {this.state.items.map(item => (
            <li key = {item.name}>{item.name} ${item.price}</li>
          ))}
-         </ul>
+        </ul>
+
+        <form onSubmit={this.submitForm}>
+          <input type="text" placeholder="Enter an item" onChange={this.changeInputName} />
+          <input type="text" placeholder="Enter the item's price" onChange={this.changeInputPrice} />
+
+          <input type = "submit" />
+ 
+        </form>
      </div>
     );
   }
+
+  private inputValue = "";
+  private inputPrice = "";
+
+  private changeInputName = (event: React.ChangeEvent<HTMLInputElement>) => {
+    this.inputValue = event.target.value;
+  };
+
+  private changeInputPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
+    this.inputPrice = event.target.value;
+  };
+
+  // constraining the type of the event 
+  private submitForm = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // generate an alert with the valye of the textbox
+    alert("Item name: " + this.inputValue + "\nPrice: $" + this.inputPrice);
+
+    const newItem: ShoppingItem = {name: this.inputValue, price: parseFloat(this.inputPrice)}
+
+    // updating the state of the component
+    this.setState({
+      // Solution 1:
+      items: this.state.items.concat(newItem)
+    });
+  };
+
 }
 
 export default App;
