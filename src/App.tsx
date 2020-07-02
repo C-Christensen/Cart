@@ -12,7 +12,7 @@ class App extends React.Component<{}, {}> {
         <header className="App-header">
           <h1>Shopping List</h1>
        </header>
-       <p>Life is much better when you have an online order on the way!</p>
+       <p className="Intro">Life is much better when you have an online order on the way!</p>
      </div>
     );
   }
