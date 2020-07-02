@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,11 +25,24 @@
 }
 
 .Intro {
-  border: 10px double black;
-  padding: 5px;
-  margin: 5px;
+  border-bottom: 3px solid red;
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+  margin: 25px;
   font-size: 20px;
-  position: relative;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+ul li {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
 }
 
 /* .App-link {
