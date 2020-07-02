@@ -20,9 +20,30 @@ class App extends React.Component<{}, AppState> {
 
   constructor(props: any, state: any){
   super(props, state);
+
+  const tea: ShoppingItem = {
+    name: "Tea",
+    price: 1.5
+  }
+
+  const latte: ShoppingItem = {
+    name: "Latte",
+    price: 4.5
+  }
+
+  const mocha: ShoppingItem = {
+    name: "Mocha",
+    price: 3.5
+  }
+
+  const americano: ShoppingItem = {
+    name: "Americano",
+    price: 2.5
+  }
+
   // state object of the constructor
   this.state = {
-    items: []
+    items: [tea, latte, mocha, americano]
    };
   }
 
