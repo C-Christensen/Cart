@@ -24,6 +24,14 @@
   color: white;
 }
 
+.Intro {
+  border: 10px double black;
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+  position: relative;
+}
+
 /* .App-link {
   color: #61dafb;
 } */
