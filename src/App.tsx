@@ -87,6 +87,7 @@ class App extends React.Component<{}, AppState> {
   // constraining the type of the event 
   private submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+  
     // generate an alert with the valye of the textbox
     alert("Item name: " + this.inputValue + "\nPrice: $" + this.inputPrice);
 
@@ -94,7 +95,7 @@ class App extends React.Component<{}, AppState> {
 
     // updating the state of the component
     this.setState({
-      // Solution 1:
+      // add to the items list
       items: this.state.items.concat(newItem)
     });
   };
