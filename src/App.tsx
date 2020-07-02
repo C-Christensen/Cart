@@ -66,7 +66,7 @@ class App extends React.Component<{}, AppState> {
           <input type="text" placeholder="Enter an item" onChange={this.changeInputName} />
           <input type="text" placeholder="Enter the item's price" onChange={this.changeInputPrice} />
 
-          <input type = "submit" />
+          <input type ="submit" value="Submit" />
  
         </form>
      </div>
