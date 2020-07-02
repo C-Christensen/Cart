@@ -1,27 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { render } from '@testing-library/react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Shopping List</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+class App extends React.Component<{}, {}> {
+    public render(){ 
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Shopping List</h1>
+          <p>Life is much better when you have an online order on the way!</p>
+       </header>
+     </div>
+    );
+  }
 }
 
 export default App;
