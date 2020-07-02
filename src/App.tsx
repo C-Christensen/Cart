@@ -55,10 +55,11 @@ class App extends React.Component<{}, AppState> {
        </header>
        <p className="Intro">Life is much better when you have an online order on the way!</p>
 
+      {/* state object's list using map*/}
        <ol>
-         <li>Tea</li>
-         <li>Latte</li>
-         <li>Mocha</li>
+         {this.state.items.map(item => (
+           <li key = {item.name}>{item.name} ${item.price}</li>
+         ))}
          </ol>
      </div>
     );
